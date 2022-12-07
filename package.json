@@ -1,11 +1,17 @@
 {
+  "homepage": "http://karansparrow.github.io/foxie-Game",
   "name": "fox-game",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "parcel src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +19,6 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "gh-pages": "^4.0.0",
     "parcel-bundler": "^1.12.3",
     "prettier": "^2.8.0"
   },
