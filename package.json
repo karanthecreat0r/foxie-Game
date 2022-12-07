@@ -1,28 +1,31 @@
 {
-  "homepage": "http://karansparrow.github.io/foxie-Game",
-  "name": "fox-game",
+  "name": "fox-game-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a digital pet game",
+  "main": "src/index.html",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
+    "format:check": "prettier --ignore-path ./.gitignore --check \"./**/*.{html,json,js,ts,css}\"",
+    "lint": "eslint --ignore-path ./.gitignore --fix \"./**/*.{js,ts}\"",
+    "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\"",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://karansparrow.github.io/foxie-Game",
+  "author": "karan",
   "devDependencies": {
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "parcel-bundler": "^1.12.3",
-    "prettier": "^2.8.0"
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^25.3.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.0.4"
   },
-  "broweserslist": [
-    "last 2 Chrome versions"
-  ]
+  "browserslist": [
+    "last 2 Firefox versions"
+  ],
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
