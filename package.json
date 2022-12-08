@@ -1,18 +1,19 @@
 {
-  "name": "fox-game-project",
+  "name": "",
   "version": "1.0.0",
-  "description": "a digital pet game",
+  "description": "",
   "main": "src/index.html",
+  "homepage": "https://karansparrow.github.io/foxie-Game",
   "scripts": {
     "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",
+    "deploy": "gh-pages -d build",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
     "format:check": "prettier --ignore-path ./.gitignore --check \"./**/*.{html,json,js,ts,css}\"",
     "lint": "eslint --ignore-path ./.gitignore --fix \"./**/*.{js,ts}\"",
     "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\"",
     "test": "jest"
   },
-  "homepage": "https://karansparrow.github.io/foxie-Game",
   "author": "karan",
   "devDependencies": {
     "eslint": "^6.8.0",
